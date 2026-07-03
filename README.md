@@ -3,7 +3,10 @@
 An interactive, production-ready full-stack machine learning web application that forecasts real estate valuations across emerging regional corridors. Built with a responsive **React Single Page Application (SPA)** architecture and a high-performance **FastAPI micro-backend**, this project delivers transparent, rule-adjusted regression insights paired with live market analytics.
 
 ---
+## 🚀 Live Deployments
 
+* **🔗 Live Interactive Dashboard (Frontend):** [https://propertypricepredictor.vercel.app/](https://propertypricepredictor.vercel.app/)
+* **📡 Live API Documentation (Swagger UI):** [https://propertypricepredictor-production.up.railway.app/docs#/](https://propertypricepredictor-production.up.railway.app/docs#/)
 ## 🚀 Core Features
 
 * **Dual-Corridor Machine Learning Forecasts:** Implements dedicated predictive regression pipelines for targeting key economic pipelines (`Dehu-Solapur` & `Kolhapur-Nashik`).
