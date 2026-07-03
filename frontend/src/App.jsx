@@ -58,10 +58,10 @@ function App() {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     try {
-      const response = await fetch("https://propertypricepredictor.up.railway.app/predict", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+      const response = await fetch("https://propertypricepredictor-production.up.railway.app/predict", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(form),
       });
 
       const result = await response.json();
@@ -154,10 +154,10 @@ if (form.amenities.length > 0) {
   const handleCompare = async () => {
     setLoading(true);
     try {
-      const response = await fetch("https://propertypricepredictor.up.railway.app/compare", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+      const response = await fetch("https://propertypricepredictor-production.up.railway.app/compare", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(form),
       });
       const result = await response.json();
       setComparison(result);
