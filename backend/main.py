@@ -6,10 +6,14 @@ import pickle
 
 app = FastAPI()
 
-# ✅ Allow frontend (React) to talk to backend
+# ✅ Allow frontend (Vercel Production & Local) to talk to backend without CORS blocks
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   
+    allow_origins=[
+        "https://propertypricepredictor.vercel.app",  # Aapka live Vercel URL
+        "http://localhost:5173",                      # Local Vite development environment
+        "*"                                           # Public bypass safety net
+    ],   
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
