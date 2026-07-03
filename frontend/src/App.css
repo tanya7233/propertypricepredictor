@@ -1,0 +1,387 @@
+/* Animated gradient background from your original style */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f8fafc, #e6fffa, #ebf8ff, #f0fff4);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Original Header styles */
+.app-header {
+  text-align: center;
+  padding: 2rem 0;
+  background: linear-gradient(135deg, #38a169, #2f855a);
+  color: white;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+.app-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+.app-header p {
+  margin: 0.5rem 0 0 0;
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+/* Original Side-by-Side Main Container Grid Layout */
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 0 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Original Glassmorphism Card Blueprint */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.form-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.input-group label {
+  font-weight: 600;
+  color: #2d3748;
+}
+.input-group select, .input-group input[type="number"] {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+  background: #ffffff;
+}
+
+/* Segmented Modern Toggle Row */
+.toggle-row {
+  display: flex;
+  background: #f1f5f9;
+  padding: 4px;
+  border-radius: 10px;
+  gap: 4px;
+}
+.toggle-btn {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 0.6rem;
+  font-weight: 700;
+  color: #4a5568;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.toggle-btn.active {
+  background: #38a169;
+  color: white;
+  box-shadow: 0 2px 6px rgba(56,161,105,0.3);
+}
+
+.amenities-row {
+  display: flex;
+  gap: 1.5rem;
+}
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.actions-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Original Glowing Buttons Layout */
+.predict-btn {
+  background: linear-gradient(135deg, #38a169, #2f855a);
+  color: white;
+  font-weight: bold;
+  padding: 0.85rem;
+  border-radius: 12px;
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.predict-btn:hover {
+  box-shadow: 0 0 20px rgba(56,161,105,0.5);
+  transform: scale(1.02);
+}
+.predict-btn.compare-variant {
+  background: linear-gradient(135deg, #3182ce, #2b6cb0);
+}
+.predict-btn.compare-variant:hover {
+  box-shadow: 0 0 20px rgba(49,130,206,0.5);
+}
+
+/* Dashboard Output Displays */
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #276749;
+  margin: 0 0 1rem 0;
+}
+.main-price-badge {
+  background: #e6fffa;
+  border: 1px solid #b2f5ea;
+  color: #234e52;
+  font-size: 1.8rem;
+  font-weight: 800;
+  padding: 1.25rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.stat-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.stat-label {
+  font-size: 0.8rem;
+  color: #718096;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.stat-val {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+.placeholder-text {
+  color: #718096;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+/* Styling for hybrid manual input overrides */
+.label-row-split {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inline-reset {
+  background: none;
+  border: none;
+  color: #3182ce;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+.inline-reset:hover {
+  text-decoration: underline;
+}
+
+.manual-input-highlight {
+  border: 2px solid #38a169 !important; /* Highlights manual field entry beautifully */
+  animation: fadeIn 0.3s ease;
+  background: #f0fff4 !important;
+}
+/* --- NEW PREMIUM COMPONENT HIERARCHY STYLES --- */
+
+/* Action Row layout structure fixes */
+.actions-row {
+  display: flex;
+  flex-direction: column; /* Stacks them elegantly for premium emphasis */
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* Primary Button Structure Override */
+.predict-btn.primary {
+  background: linear-gradient(135deg, #2f855a, #22543d); /* Darker, deep premium green accent solid */
+  color: white;
+  border: none;
+  font-size: 1.05rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(34, 84, 61, 0.25);
+}
+.predict-btn.primary:hover:not(:disabled) {
+  box-shadow: 0 6px 20px rgba(34, 84, 61, 0.45);
+  transform: scale(1.015);
+}
+
+/* Secondary Button Structure (Clearly lower weight, sophisticated layout) */
+.predict-btn.secondary {
+  background: transparent !important;
+  color: #2f855a !important; /* Elegant green clear outline style */
+  border: 2px solid #2f855a !important;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: none;
+  padding: 0.75rem;
+}
+.predict-btn.secondary:hover:not(:disabled) {
+  background: rgba(47, 133, 90, 0.06) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Disabled State Handling */
+.predict-btn:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+/* Spinner Loader Micro-interaction CSS */
+.btn-loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2.5px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spinLoader 0.7s linear infinite;
+}
+
+@keyframes spinLoader {
+  to { transform: rotate(360deg); }
+}
+
+/* Corridor Highlighted Selected Badge Styles */
+.corridor-highlight-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #1a202c; /* Deep solid charcoal dark background */
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  animation: fadeIn 0.4s ease;
+}
+
+.badge-label {
+  color: #a0aec0; /* Subtle grayish description */
+  font-weight: 500;
+}
+
+.badge-value {
+  color: #48bb78; /* Clean glowing mint green text accent */
+  font-weight: 700;
+}
+/* --- AI ML EXPLAINABILITY STYLING MATRIX --- */
+.explainability-block {
+  margin-top: 1.75rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.explainability-title {
+  margin: 0 0 0.85rem 0;
+  font-size: 0.95rem;
+  color: #4a5568;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.drivers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.driver-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+/* Feature weight color tags mapping */
+.driver-item.positive {
+  background: #f0fff4;
+  border-left: 4px solid #38a169;
+  color: #22543d;
+}
+.driver-item.positive .driver-icon {
+  color: #38a169;
+}
+
+.driver-item.negative {
+  background: #fff5f5;
+  border-left: 4px solid #e53e3e;
+  color: #742a2a;
+}
+.driver-item.negative .driver-icon {
+  color: #e53e3e;
+}
+
+.driver-item.neutral {
+  background: #f7fafc;
+  border-left: 4px solid #a0aec0;
+  color: #4a5568;
+}
+.driver-item.neutral .driver-icon {
+  color: #718096;
+}
+
+.driver-text {
+  margin: 0;
+  font-weight: 500;
+}
+.driver-sub-detail {
+  margin: 0;
+  font-size: 0.76rem;
+  color: #64748b;
+  font-weight: 500;
+  line-height: 1.3;
+}
